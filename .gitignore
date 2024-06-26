@@ -1,0 +1,11 @@
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore specific output directory
+Output_7-Pygsuia-day0-2/
+
+# Ignore specific data directory
+data_raw/
