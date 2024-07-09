@@ -7,6 +7,7 @@ import joblib
 from datetime import datetime
 
 def dir_setup(raw_directory):
+    raw_directory = os.path.normpath(raw_directory)
     sample_name = os.path.basename(raw_directory)
     output_dir_name = f'Output_{sample_name}'
 
