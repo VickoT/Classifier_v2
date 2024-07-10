@@ -11,9 +11,11 @@ def dir_setup(raw_directory):
     sample_name = os.path.basename(raw_directory)
     output_dir_name = f'Output_{sample_name}'
 
-    path_current = os.getcwd()
-    path_raw = os.path.join(path_current, raw_directory)
-    path_output = os.path.join(path_current, output_dir_name)
+    #path_current = os.getcwd()
+    #path_raw = os.path.join(path_current, raw_directory)
+    path_raw = os.path.abspath(raw_directory)
+    #path_output = os.path.join(path_current, output_dir_name)
+    path_output = os.path.join(os.path.dirname(path_raw), output_dir_name)
     path_extracted_imgs = os.path.join(path_output, 'Extracted_images')
     path_predicted_imgs = os.path.join(path_output, 'Predicted_images')
     path_predicted_junk = os.path.join(path_predicted_imgs, 'Junk')
