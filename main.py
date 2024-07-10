@@ -134,7 +134,8 @@ def report_file(path_raw, path_output, path_pred_junk, path_pred_missed, path_pr
         f"Junk: {count_junk}",
         f"Missed: {count_missed}",
         f"Protist: {count_protist}",
-        f"\nEstimated conc. (protists/ml): {count_protist / volume_imaged:.2f}"
+        f"\nEstimated conc. (protists/ml): {count_protist / volume_imaged:.2f}",
+        f"\n{sample}\t{volume_imaged}\t{count_junk}\t{count_missed}\t{count_protist}\t{count_protist / volume_imaged:.2f}"
     ]
 
     with open(os.path.join(path_output, 'report.txt'), 'w') as report_file:
